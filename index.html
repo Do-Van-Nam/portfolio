@@ -20,25 +20,25 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="./images/image.png" alt="" srcset="">
+                <img src="./images/codeicon.png" alt="" srcset="">
             </div>
             <nav>
                 <ul>
-                    <li>Intro</li>
-                    <li>About</li>
-                    <li>Education</li>
-                    <li>Skills</li>
-                    <li>Portfolio</li>
-                    <li>Experience</li>
+                    <li onclick="scrollToSection('intro')">Intro</li>
+                    <li onclick="scrollToSection('about')">About</li>
+                    <li onclick="scrollToSection('education')">Education</li>
+                    <li onclick="scrollToSection('skills')">Skills</li>
+                    <li onclick="scrollToSection('porfolio')">Portfolio</li>
+                    <li onclick="scrollToSection('experience')">Experience</li>
                 </ul>
             </nav>
             <div></div>
         </div>
     </header>
     <main>
-        <div class="intro">
+        <div class="intro" id="intro">
             <div class="greeting">I'M <span class="name">Nam</span> </div>
-            <button class="contactme_btn">Contact Me</button>
+            <button class="contactme_btn" onclick="scrollToSection('contact')">Contact Me</button>
             <div class="contact_bar">
                 <div class="line"></div>
                 <div class="icon_container">
@@ -60,20 +60,18 @@
                 </div>
             </div>
         </div>
-        <div class="about">
+        <div class="about" id="about">
             <h1>About</h1>
             <div class="about_container">
                 <div class="vertical_line"></div>
-                <div class="about_txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae ducimus quas
-                    inventore voluptates aspernatur consectetur, assumenda nesciunt laborum ea sit illo minus? Ab
-                    eligendi corrupti consequuntur praesentium veniam libero aut! Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Cupiditate ipsum praesentium placeat in voluptatem minima fugit
-                    aliquid magnam laudantium fuga voluptatum, maiores autem tempore nemo, et explicabo exercitationem
-                    nisi amet.</div>
+                <div class="about_txt">
+                    I'm learning WEB programing. <br>
+                    In the future, I'm wanna become Full Stack Developer.
+                </div>
 
             </div>
         </div>
-        <div class="education flex_container">
+        <div class="education flex_container" id="education">
             <h1 class="education_title">Education</h1>
             <div class="edubox">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H256V416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V208zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H512c-8.8 0-16-7.2-16-16V336zM232 176a88 88 0 1 1 176 0 88 88 0 1 1 -176 0zm88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H336V144c0-8.8-7.2-16-16-16z"/></svg>
@@ -88,7 +86,7 @@
                 <div class="flex_container info">GPA<div class="small line"></div> 3.32</div>
             </div>
         </div>
-        <div class="skills">
+        <div class="skills" id="skills">
             <h1 style="align-self: center;margin-bottom: 20px;">My Skills</h1>
             <div class="flex_container">
                 <div class="skillbox">
@@ -125,60 +123,40 @@
                 </div>
             </div>
         </div>
-        <div class="porfolio skills">
+        <div class="porfolio skills" id="porfolio">
             <h1 style="align-self: center;margin-bottom: 20px;">Portfolio</h1>
             <div class="flex_container">
-                <div class="portfolio_item">
-                    <div class="hidden">
-                        <h1>Name</h1>
-                        <div>description </div>
-                        <button>See More</button>
+                <div class="portfolio_item" style="background-image: url('./images/monalisa.png');background-size: cover; background-position: center center;">
+                    <div class="hidden flex_container">
+                        <h1>ARTY</h1>
+                        <div class="description">Website where you can buy tickets and view paintings online</div>
+                          <button onclick="openInNewTab('https://github.com/Do-Van-Nam/artyweb')">See More</button>    
                     </div>
                 </div>
-                <div class="portfolio_item">
-                    <div class="hidden">
-                        <h1>Name</h1>
-                        <div>description </div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="portfolio_item">
-                    <div class="hidden">
-                        <h1>Name</h1>
-                        <div>description </div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="portfolio_item">
-                    <div class="hidden">
-                        <h1>Name</h1>
-                        <div>description </div>
-                        <button>See More</button>
-                    </div>
-                </div>
+                
             </div>
+            <button onclick="openInNewTab('https://github.com/Do-Van-Nam')">See More</button>    
+            
         </div>
-        <div class="flex_container education experience">
+        <div class="flex_container education experience" id="experience">
             <h1 class="education_title">Experience</h1>
             <div class="timeline">
                 <div class="date">
-                    <div class="datelabel">2021</div>
+                    <div class="datelabel">1/2024 - 5/2024</div>
                 </div>
                 <div class="line_container flex_container">
                     <div class="ball"></div>
                     <div class="line"></div>
                 </div>
                 <div class="detail">
-                    <h1>J&T</h1>
-                    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ducimus officia eveniet
-                        earum sapiente ipsa voluptate exercitationem quaerat ipsum? Tempore pariatur dolorum, eos enim
-                        quo ab! Nam, inventore quam.</div>
+                    <h1>J&T Express</h1>
+                    <div>Order confirmation collaborator</div>
                 </div>
             </div>
             <div class="timeline ">
                 <div class="date">
                     <div class="datelabel">
-                        2021</div>
+                        5/2024 - 8/2024</div>
                 </div>
                 <div class="line_container flex_container">
                     <div class="ball"></div>
@@ -186,15 +164,13 @@
                 </div>
                 <div class="detail">
                     <h1>FPT telecom</h1>
-                    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ducimus officia eveniet
-                        earum sapiente ipsa voluptate exercitationem quaerat ipsum? Tempore pariatur dolorum, eos enim
-                        quo ab! Nam, inventore quam.</div>
+                    <div>Telesale collaborator</div>
                 </div>
             </div>
         </div>
     </main>
     <footer class="flex_container">
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="contact_header">
                 <div class="vertical_line left"></div>
                 <h1 class="flex_container contactme">Contact Me</h1>
